@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Box, Container, Typography } from "@mui/material"
-import SwipeSection from "../../SwipeSection"
+import SwipeSection from "../SwipeSection"
 
 const contents = [
   {
@@ -30,7 +30,7 @@ export default function Index() {
           </Typography>
           <Box textAlign="center">
             <Image
-              width={200}
+              width={218}
               height={281}
               priority
               src="/footballer 2.svg"

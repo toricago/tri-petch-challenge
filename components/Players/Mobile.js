@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Box, Container, Typography } from "@mui/material"
-import SwipeSection from "../../SwipeSection"
+import SwipeSection from "../SwipeSection"
 
 const contents = [
   {

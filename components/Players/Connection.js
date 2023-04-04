@@ -1,34 +1,23 @@
 import { Box, Container, Typography } from "@mui/material"
 import useMediaQuery from "@mui/material/useMediaQuery"
-import useWindowSize from "@/hooks/useWindowSize"
 import TextUnderline from "@/components/TextUnderline"
+import ResponsiveContainer from "@/components/ResponsiveContainer"
 
-const Connection = ({ percent = 50 }) => {
-  const [width] = useWindowSize()
-  const startPoint = 1315
-  const startPoint2 = 768
+const Connection = () => {
   const matches = useMediaQuery("(max-width:768px)")
-  const calculateMarginTop =
-    width < startPoint ? `${124 - (startPoint - width) * 0.13}px` : "124px"
-  const calculateTitleSize =
-    width < startPoint2 ? 105 - (startPoint2 - width) * 0.2 : 90
 
   return (
     <Box>
       <Container maxWidth="desktop">
-        <Box display="flex" pt={calculateMarginTop}>
-          <Box width={`${percent}%`}>
-            <Typography
-              variant="h1"
-              fontSize={calculateTitleSize}
-              lineHeight={"105px"}
-              color="#E7E7E7"
+        <Box display="flex">
+          <ResponsiveContainer>
+            <Box
+              mt={matches ? "34px" : "68px"}
+              display="flex"
+              alignItems="center"
             >
-              PLAYERS
-            </Typography>
-            <Box mt={matches ? "34px" : "68px"} display="flex">
               <TextUnderline text="01" />
-              <Typography fontSize={36} color="#C2C2C2">
+              <Typography variant="text_title" color="#C2C2C2">
                 CONNECTION
               </Typography>
             </Box>
@@ -40,7 +29,7 @@ const Connection = ({ percent = 50 }) => {
               Connect with talented athlete directly, you can watch their skills
               through video showreels directly from Surface 1.
             </Typography>
-          </Box>
+          </ResponsiveContainer>
           <Box width="50%" />
         </Box>
       </Container>

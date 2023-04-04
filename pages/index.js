@@ -1,13 +1,8 @@
 import Head from "next/head"
-import AthletsNormal from "../components/Athlets/normal/"
-import PlayersNormal from "../components/Players/normal/"
-import AthletsMobile from "../components/Athlets/mobile/"
-import PlayersMobile from "../components/Players/mobile/"
-import useMediaQuery from "@mui/material/useMediaQuery"
+import AthletsNormal from "../components/Athlets/"
+import PlayersNormal from "../components/Players/"
 
 function Home() {
-  const isMobile = useMediaQuery("(max-width:640px)")
-
   return (
     <>
       <Head>
@@ -17,17 +12,8 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {isMobile ? (
-          <>
-            <AthletsMobile />
-            <PlayersMobile />
-          </>
-        ) : (
-          <>
-            <AthletsNormal />
-            <PlayersNormal />
-          </>
-        )}
+        <AthletsNormal />
+        <PlayersNormal />
       </main>
     </>
   )

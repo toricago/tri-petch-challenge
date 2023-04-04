@@ -7,6 +7,10 @@ import SwipeableViews from "react-swipeable-views"
 import TextUnderline from "@/components/TextUnderline"
 
 const StyledMobileStepper = styled(MobileStepper)(({ theme }) => ({
+  "& .MuiMobileStepper-dots": {
+    width: 54,
+    justifyContent: "space-between",
+  },
   "& .MuiMobileStepper-dot": {
     zIndex: 1,
     width: 10,
@@ -40,7 +44,7 @@ function SwipeableTextMobileStepper({ contents = [] }) {
               <Box>
                 <Box display="flex">
                   <TextUnderline text={`0${index + 1}`} isMobile />
-                  <Typography fontSize={28} mb={"20px"} color="#C2C2C2">
+                  <Typography variant="text_title" mb={"20px"} color="#C2C2C2">
                     {content.title}
                   </Typography>
                 </Box>

@@ -1,13 +1,8 @@
 import { Box, Typography } from "@mui/material"
 
-export default function TextUnderline({
-  text,
-  contrast,
-  textContrast,
-  isMobile,
-}) {
+export default function TextUnderline({ text, contrast, textContrast }) {
   return (
-    <Box mt={isMobile ? 0 : 1} mr={1} textAlign="center">
+    <Box mr={1} textAlign="center">
       <Typography
         color={textContrast ? "#603EBE" : "black"}
         variant="body2"

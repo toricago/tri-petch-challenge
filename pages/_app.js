@@ -34,6 +34,13 @@ theme.typography.body1 = {
   },
 }
 
+theme.typography.text_title = {
+  fontSize: "36px",
+  [theme.breakpoints.down("mobile")]: {
+    fontSize: "28px",
+  },
+}
+
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
